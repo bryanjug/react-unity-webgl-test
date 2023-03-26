@@ -1,0 +1,1059 @@
+html, * {
+    padding: 0;
+    margin: 0;
+    overflow: hidden;
+}
+
+body {
+    background: rgb(69,89,96);
+}
+
+.timerLeftSection {
+    text-align: right;
+}
+
+.timerRightSection {
+    text-align: left;
+}
+
+.confirmedTimeChange {
+    top: 95%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    position: fixed;
+    color: white;
+    text-align: center !important;
+    animation: fade 1s;
+    -webkit-animation: fade 1s;
+    -moz-animation: fade 1s;
+    -o-animation: fade 1s;
+    -ms-animation: fade 1s;
+}
+
+.changeTimerText {
+    top: 58%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    position: fixed;
+    width: 90%;
+    height: 60%;
+    text-align: center;
+}
+
+.changeTimerAlert {
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    position: fixed;
+    height: 50%;
+    width: 80%;
+    animation: fade 1s;
+    -webkit-animation: fade 1s;
+    -moz-animation: fade 1s;
+    -o-animation: fade 1s;
+    -ms-animation: fade 1s;
+}
+
+@keyframes fade {
+    0% {opacity:0;}
+    100% {opacity:1;}
+}
+
+@-moz-keyframes fade {
+    0% {opacity:0;}
+    100% {opacity:1;}
+}
+
+@-webkit-keyframes fade {
+    0% {opacity:0;}
+    100% {opacity:1;}
+}
+
+@-o-keyframes fade {
+    0% {opacity:0;}
+    100% {opacity:1;}
+}
+
+@-ms-keyframes fade {
+    0% {opacity:0;}
+    100% {opacity:1;}
+}
+
+input[type=number]::-webkit-inner-spin-button, 
+input[type=number]::-webkit-outer-spin-button { 
+  -webkit-appearance: none; 
+}
+
+input[type=number] {
+  -moz-appearance: textfield;
+}
+
+.restingTitle {
+    margin-top: 30px;
+}
+
+.restingTitle, .workingTitle {
+    margin-bottom: 20px;
+}
+
+.changeTimer input {
+    text-align: center !important;
+    width: 55px;
+    line-height: 220% !important;
+    font-size: 220%;
+    background-color: #2F3D43;
+    color: white !important;
+    border: none;
+    border-radius: 10px !important;
+    font-weight: 100;
+}
+
+.changeTimer input:focus {
+    outline: none !important;
+    box-shadow: none !important;
+    background-color: #273236 !important;
+}
+
+.changeTimerButton {
+    margin-top: 40px;
+}
+
+.changeTimerButton:hover {
+    background-color: #4B9C96 !important;
+}
+
+.changeTimer {
+    text-align: center !important;
+    bottom: 50%;
+    left: 50%;
+    transform: translate(-50%, 50%);
+    position: fixed;
+}
+
+.changeTimerButton {
+    width: 120px;
+    background-color: #2F3D43 !important;
+    border: none;
+    border-radius: 20px;
+    color: white;
+    padding-top: 4px;
+    padding-bottom: 4px;
+}
+
+.loadingText {
+    line-height: 200% !important;
+}
+
+.leaderboardButtonLeft {
+    padding-left: 20px;
+    padding-right: 30px;
+}
+
+.leaderboardButtonRight {
+    padding-left: 30px;
+    padding-right: 20px;
+}
+
+.leaderboardButtonIcon, .leaderboardButtonText {
+    vertical-align: middle;
+    display: inline-block;
+}
+
+.leaderboardButtonIconRight {
+    padding-left: 10% !important;
+}
+
+.leaderboardButtonIconLeft {
+    padding-right: 10% !important;
+}
+
+.leaderboardButtonText {
+    padding-bottom: 4%;
+}
+
+.leaderboardButtons {
+    text-align: center !important;
+    margin-top: 5% !important;
+}
+
+.leaderboardButtons button {
+    padding-top: 1%;
+    padding-bottom: 1%;
+    border-radius: 100px;
+    background-color: #2F3D43;
+    border: none;
+    color: white;
+}
+
+.leaderboardButtons button:hover {
+    background-color: #4B9C96;
+}
+
+.leaderboardsContainer {
+    bottom: 50%;
+    left: 50%;
+    transform: translate(-50%, 50%);
+    position: fixed;
+}
+
+.userHeader p {
+    padding-left: 15% !important;
+    text-align: left !important;
+}
+
+.scoreHeader p {
+    text-align: right !important;
+    padding-right: 15% !important;
+}
+
+.leaderboards li {
+    background-color: inherit !important;
+    border-color: rgb(158, 180, 175) !important;
+    color: white !important;
+}
+
+.leaderboards li:hover {
+    color: #7bfdf5 !important;
+}
+
+.leaderboards .badge {
+    background-color: #2F3D43 !important;
+    padding: 5px 8px 5px 8px !important;
+}
+
+.leaderboards {
+    border: solid 1px rgb(158, 180, 175) !important;
+}
+
+.loading {
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    position: fixed;
+    text-align: center;
+    z-index: 999999 !important;
+}
+
+.menu-ham {
+    width: 100%;
+}
+
+.menu-exit {
+    width: 100%;
+}
+
+.mhead {
+    right: 0 !important;
+    z-index: 99999999;
+    position: absolute;
+    top: 0 !important;
+    cursor: pointer;
+    width: 18%;
+}
+
+.menu {
+    width: 60%;
+    height: 100%;
+    position: fixed;
+    right: -60%;
+    top: 0;
+    background-color: #2F3D43;
+    box-shadow: 1px 0 5px black;
+    transition: all ease 1s;
+    z-index: 99999999 !important;
+}
+
+.close-menu {
+    float: right;
+    min-height: 30px;
+    margin-right: 10%;
+    margin-top: 10%;
+    cursor: pointer;
+    width: 10%;
+}
+
+.menu ul {
+    padding-left: 0;
+    margin-top: 35% !important;
+    box-shadow: none !important;
+}
+
+.menu button {
+    width: 100%;
+    list-style: none;
+    text-decoration-style: none;
+    line-height: 170%;
+    padding: 5% 0% 5% 5%;
+    text-align: center !important;
+    background-color: inherit;
+    text-transform: uppercase;
+    font-size: 16px;
+    color: #E7E8EB;
+    border: none;
+    outline: none;
+}
+
+.menu button:hover {
+    background-color: #4B9C96 !important;
+    cursor: pointer;
+}
+
+a:link { text-decoration: none; }
+
+
+a:visited { text-decoration: none; }
+
+
+a:hover { text-decoration: none; }
+
+
+a:active { text-decoration: none; }
+
+.googleBtn {
+    width: 100% !important;
+    text-align: center !important;
+    background-color: inherit !important;
+    color: #E7E8EB !important;
+    text-decoration: none !important;
+    text-transform: uppercase;
+    box-shadow: none !important;
+    border: none !important;
+    /* display: inline-block !important; */
+    font-size: 16px !important;
+}
+
+.displayNone {
+    display: none !important;
+}
+
+.displayInline {
+    display: inline-block !important;
+}
+
+.pomodoroContainer {
+    z-index: 999;
+    position: absolute;
+    height: 100%;
+    width: 100%;
+}
+
+.pomodoroCounterContainer {
+    z-index: 9999;
+    position: absolute;
+}
+
+.navigation {
+    background-color: #455960 !important;
+    border: none;
+    border-radius: 0;
+    z-index: 9999;
+}
+
+.buttonContainer {
+    padding: 0;
+    margin: auto;
+}
+
+.navContainer {
+    margin: auto;
+    width: 100%;
+    height: 100% !important;
+}
+
+.navButton {
+    width: 100% !important;
+}
+
+.activity {
+    top: 15%;
+    left: 50%;
+    transform: translate(-50%, 0);
+    position: fixed;
+}
+
+.countdownContainer {
+    bottom: 10%;
+    left: 50%;
+    transform: translate(-50%, 0);
+    position: fixed;
+}
+
+.loginAlert {
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    position: fixed;
+    height: 50%;
+    width: 80%;
+    animation: fadeIn 4s;
+    -webkit-animation: fadeIn 4s;
+    -moz-animation: fadeIn 4s;
+    -o-animation: fadeIn 4s;
+    -ms-animation: fadeIn 4s;
+}
+
+@keyframes fadeIn {
+    0% {opacity:0;}
+    75%{opacity:0;}
+    100% {opacity:1;}
+}
+
+@-moz-keyframes fadeIn {
+    0% {opacity:0;}
+    75%{opacity:0;}
+    100% {opacity:1;}
+}
+
+@-webkit-keyframes fadeIn {
+    0% {opacity:0;}
+    75%{opacity:0;}
+    100% {opacity:1;}
+}
+
+@-o-keyframes fadeIn {
+    0% {opacity:0;}
+    75%{opacity:0;}
+    100% {opacity:1;}
+}
+
+@-ms-keyframes fadeIn {
+    0% {opacity:0;}
+    75%{opacity:0;}
+    100% {opacity:1;}
+}
+
+.loginAlertText {
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    position: fixed;
+    width: 90%;
+    height: 60%;
+    text-align: center;
+}
+
+.catImg {
+    width: 70% !important;
+    height: 50% !important;
+    margin-bottom: 5%;
+}
+
+.navigation:hover {
+    background-color: #4B9C96 !important;
+}
+
+.navigation:focus {
+    outline: none !important;
+    box-shadow: none !important;
+    background-color: #4B9C96;
+}
+
+.pomodoroCounter {
+    background-color: #54AEA9;
+    padding-left: 8px;
+    padding-right: 12px;
+    border-radius: 0 30px 30px 0;
+    font-weight: 100;
+    font-size: 120%;
+}
+
+.btn-circle.btn-sm {
+    width: 30px;
+    height: 30px;
+    padding: 6px 0px;
+    border-radius: 15px;
+    text-align: center;
+}
+.btn-circle.btn-md {
+    width: 50px;
+    height: 50px;
+    padding: 7px 10px;
+    border-radius: 25px;
+    text-align: center;
+}
+.btn-circle.btn-xl {
+    width: 70px;
+    height: 70px;
+    padding: 10px 16px;
+    border-radius: 35px;
+    text-align: center;
+    border: none;
+}
+
+.cyanButton {
+    background-color: #54AEA9;
+}
+
+.cyanButton:hover { 
+    background-color: #458d89;
+    border: none;
+}
+
+.cyanButton:focus {
+    outline: none !important;
+    box-shadow: none !important;
+}
+
+.statsNavContainer {
+    margin-top: 10% !important;
+}
+
+.statsNavigation {
+    border-radius: 0;
+    background-color: #2F3D43;
+    border: none;
+    border-left: 0.2px solid #28343a;
+    border-right: 0.2px solid #28343a;
+}
+
+.statsNavigation:hover {
+    background-color: #4B9C96;
+}
+
+.statsNavigation:focus {
+    outline: none !important;
+    box-shadow: none !important;
+    background-color: #4B9C96;
+}
+
+.statsNavigationLeft {
+    border-radius: 15px 0 0 15px;
+    padding-left: 20px;
+}
+
+.statsNavigationRight {
+    border-radius: 0 15px 15px 0;
+    padding-right: 20px;
+}
+
+.countdown {
+    line-height: 90%;
+    margin-top: 280px !important;
+    text-shadow: 0px 0px 10px black;
+}
+
+.graph {
+    position: relative !important;
+    margin: auto !important;
+    height: 70vh !important;
+    width: 100% !important;
+    padding-left: 5% !important;
+    padding-right: 5% !important;
+}
+
+@media only screen and (min-width: 375px) { 
+    .mhead {
+        width: 16%;
+    }
+    .menu {
+        width: 50%;
+        right: -50%;
+    }
+}
+
+@media only screen and (min-width: 425px) { 
+    .catImg {
+        width: 200px !important;
+    }
+    .statsNavContainer {
+        margin-top: 0 !important;
+    }
+    .mhead {
+        width: 60px;
+    }
+    .menu {
+        width: 45%;
+        right: -45%;
+    }
+    .leaderboardsContainer {
+        width: 425px !important;
+    }
+}
+
+@media only screen and (min-width: 768px) { 
+    .changeTimerAlert{
+        width: 50% !important;
+    } 
+    .changeTimerText {
+        top: 60%;
+    }
+    .leaderboardTitle {
+        margin-bottom: 5%;
+    }
+    .loginAlert {
+        width: 50% !important;
+    }
+    .mhead {
+        width: 8%;
+    }
+    .menu {
+        width: 25%;
+        right: -25%;
+    }
+}
+
+@media only screen and (min-width: 1024px) { 
+    .changeTimerAlert{
+        width: 40% !important;
+    } 
+    .loginAlert {
+        width: 40% !important;
+    }
+    .mhead {
+        width: 6%;
+    }
+    .menu {
+        width: 20%;
+        right: -20%;
+    }
+}
+
+@media only screen and (min-width: 1069px) { 
+    .loginAlert {
+        width: 30% !important;
+    }
+    .mhead {
+        width: 5.5%;
+    }
+    .menu {
+        width: 18%;
+        right: -18%;
+    }
+}
+@media only screen and (min-width: 1295px) { 
+    .changeTimerText {
+        top: 65%;
+    }
+    .changeTimerAlert{
+        width: 35% !important;
+    } 
+}
+
+@media only screen and (min-width: 1425px) { 
+    .changeTimerAlert{
+        width: 35% !important;
+    } 
+    .leaderboardTitle {
+        margin-bottom: 10%;
+    }
+    .leaderboardButtons {
+        margin-top: 10% !important;
+    }
+    .leaderboardsContainer {
+        font-size: 110%;
+    }
+    .leaderboardButtonIcon {
+        width: 20px;
+    }
+}
+
+@media only screen and (min-width: 1583px) { 
+    .close {
+        font-size: 120% !important;
+    }
+    .changeTimer, .confirmedTimeChange  {
+        font-size: 120%;
+    }
+    .changeTimer input {
+        text-align: center !important;
+        width: 65px;
+    }
+    .changeTimerButton {
+        width: 140px;
+        padding-top: 6px;
+        padding-bottom: 6px;
+    }
+    .changeTimerAlert{
+        font-size: 120%;
+    } 
+    .leaderboardsContainer {
+        font-size: 120%;
+        width: 25% !important;
+    }
+    .leaderboardButtonIcon {
+        width: 25px;
+    }
+    .menu li, .googleText {
+        font-size: 120% !important;
+    }
+    .catImg { 
+        width: 50% !important;
+    }
+    .navButton svg {
+        width: 7%;
+        height: 7%;
+        padding-top: .1%;
+        padding-bottom: .1%;
+    }
+    .activity {
+        font-size: 120%;
+    }
+    .countdownContainer p {
+        font-size: 700% !important;
+    }
+    .btn-circle.btn-xl {
+        width: 80px;
+        height: 80px;
+        padding: 20px 18.8px;
+        border-radius: 65px;
+        font-size: 120%;
+    }
+    .pomodoroCounter {
+        font-size: 150%;
+    }
+} 
+
+@media only screen and (min-width: 1781px) { 
+    .close {
+        font-size: 130% !important;
+    }
+    .changeTimerAlert{
+        width: 30% !important;
+        font-size: 130%;
+    } 
+    .changeTimer, .confirmedTimeChange  {
+        font-size: 130%;
+    }
+    .changeTimer input {
+        text-align: center !important;
+        width: 65px;
+    }
+    .changeTimerButton {
+        width: 140px;
+        padding-top: 6px;
+        padding-bottom: 6px;
+    }
+    .leaderboardsContainer li {
+        padding-top: 4%;
+        padding-bottom: 4%;
+    }
+    .leaderboardsContainer {
+        font-size: 130%;
+    }
+    .leaderboardButtonIcon {
+        width: 30px;
+    }
+    .menu li, .googleText {
+        font-size: 130% !important;
+    }
+    .statsNavigation {
+        font-size: 115%;
+    }
+    .activity {
+        font-size: 130%;
+    }
+    .countdownContainer p {
+        font-size: 750% !important;
+    }
+    .btn-circle.btn-xl {
+        width: 90px;
+        height: 90px;
+        padding: 20px 18.8px;
+        border-radius: 65px;
+        font-size: 130%;
+    }
+    .pomodoroCounter {
+        font-size: 160%;
+    }
+    .navButton svg {
+        width: 7%;
+        height: 7%;
+        padding-top: .1%;
+        padding-bottom: .1%;
+    }
+} 
+
+@media only screen and (min-width: 1900px) { 
+    .close {
+        font-size: 140% !important;
+    }
+    .changeTimerAlert, .confirmedTimeChange {
+        font-size: 140%;
+    } 
+    .changeTimer {
+        font-size: 140%;
+    }
+    .changeTimer input {
+        text-align: center !important;
+        width: 80px;
+    }
+    .changeTimerButton {
+        width: 160px;
+        padding-top: 6px;
+        padding-bottom: 6px;
+    }
+    .workingTitle, .restingTitle {
+        margin-bottom: 35px;
+    }
+    .restingTitle {
+        margin-top: 35px;
+    }
+    .setTimerButton {
+        margin-top: 55px;
+    }
+    .leaderboardsContainer {
+        font-size: 140%;
+    }
+    .menu li, .googleText {
+        font-size: 140% !important;
+    }
+    .statsNavigation {
+        font-size: 130%;
+    }
+    .activity {
+        font-size: 140%;
+    }
+    .countdownContainer p {
+        font-size: 800% !important;
+    }
+    .btn-circle.btn-xl {
+        width: 100px;
+        height: 100px;
+        padding: 20px 18.8px;
+        border-radius: 65px;
+        text-align: center;
+        border: none;
+        font-size: 130%;
+    }
+    .pomodoroCounter {
+        font-size: 170%;
+    }
+} 
+
+@media only screen and (min-width: 2137px) { 
+    .close {
+        font-size: 160% !important;
+    }
+    .changeTimerAlert, .confirmedTimeChange {
+        font-size: 160%;
+    } 
+    .changeTimer {
+        font-size: 160%;
+    }
+    .changeTimer input {
+        text-align: center !important;
+        width: 90px;
+    }
+    .changeTimerButton {
+        width: 190px;
+        border-radius: 50px;
+        padding-top: 8px;
+        padding-bottom: 8px;
+    }
+    .workingTitle, .restingTitle {
+        margin-bottom: 40px;
+    }
+    .restingTitle {
+        margin-top: 40px;
+    }
+    .leaderboardsContainer {
+        font-size: 160%;
+    }
+    .leaderboardButtonIcon {
+        height: 20px;
+    }
+    .menu li, .googleText {
+        font-size: 160% !important;
+    }
+    .statsNavigation {
+        font-size: 150%;
+    }
+    .activity {
+        font-size: 150%;
+    }
+    .countdownContainer p {
+        font-size: 850% !important;
+    }
+    .btn-circle.btn-xl {
+        width: 110px;
+        height: 110px;
+        padding: 20px 18.8px;
+        border-radius: 65px;
+        text-align: center;
+        border: none;
+        font-size: 140%;
+    }
+    .pomodoroCounter {
+        font-size: 180%;
+        padding-left: 15px;
+        padding-right: 22px;
+    }
+    .navButton svg {
+        padding-top: .4%;
+        padding-bottom: .4%;
+    }
+} 
+
+@media only screen and (min-width: 2850px) { 
+    .close {
+        font-size: 220% !important;
+    }
+    .changeTimerAlert, .confirmedTimeChange {
+        font-size: 220%;
+    } 
+    .changeTimer {
+        font-size: 220%;
+    }
+    .changeTimer input {
+        width: 130px;
+    }
+    .changeTimerButton {
+        width: 270px;
+        padding-top: 10px;
+        padding-bottom: 10px;
+    }
+    .workingTitle, .restingTitle {
+        margin-bottom: 60px;
+    }
+    .restingTitle {
+        margin-top: 60px;
+    }
+    .setTimerButton {
+        margin-top: 65px;
+    }
+    .leaderboardsContainer li {
+        padding-top: 5%;
+        padding-bottom: 5%;
+    }
+    .leaderboardButtonLeft {
+        padding-left: 30px;
+        padding-right: 40px;
+    }
+    .leaderboardButtonRight {
+        padding-left: 40px;
+        padding-right: 30px;
+    }
+    .leaderboardsContainer {
+        font-size: 220%;
+    }
+    .leaderboardButtonIcon {
+        height: 40px;
+        width: 40px;
+    }
+    .menu li, .googleText {
+        font-size: 220% !important;
+    }
+    .statsNavigation {
+        font-size: 200%;
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+    .statsNavigationLeft {
+        border-radius: 25px 0 0 25px;
+        padding-left: 35px;
+    }
+    .statsNavigationRight {
+        border-radius: 0 25px 25px 0;
+        padding-right: 35px;
+    }
+    .activity {
+        font-size: 200%;
+    }
+    .countdownContainer p {
+        font-size: 1200% !important;
+    }
+    .btn-circle.btn-xl {
+        width: 160px;
+        height: 160px;
+        padding: 20px 0;
+        border-radius: 105px;
+        text-align: center;
+        border: none;
+        font-size: 200%;
+    }
+    .pomodoroCounter {
+        font-size: 250%;
+        padding-left: 20px;
+        padding-right: 28px;
+        padding-bottom: 5px;
+    }
+} 
+
+@media only screen and (min-width: 4275px) { 
+    .changeTimerAlert, .confirmedTimeChange {
+        font-size: 320%;
+    } 
+    .changeTimer {
+        font-size: 320%;
+    }
+    .changeTimer input {
+        width: 180px;
+    }
+    .changeTimerButton {
+        width: 370px;
+        padding-top: 14px;
+        padding-bottom: 14px;
+    }
+    .workingTitle, .restingTitle {
+        margin-bottom: 90px;
+    }
+    .restingTitle {
+        margin-top: 90px;
+    }
+    .setTimerButton {
+        margin-top: 95px;
+    }
+    .leaderboardsContainer li {
+        padding-top: 5%;
+        padding-bottom: 5%;
+    }
+    .leaderboardButtonLeft {
+        padding-left: 50px;
+        padding-right: 60px;
+    }
+    .leaderboardButtonRight {
+        padding-left: 60px;
+        padding-right: 50px;
+    }
+    .leaderboardsContainer {
+        font-size: 320%;
+    }
+    .leaderboardButtonIcon {
+        height: 60px;
+        width: 60px;
+    }
+    .leaderboardCount {
+        width: 11%;
+    }
+    .menu li, .googleText {
+        font-size: 320% !important;
+    }
+    .statsNavigation {
+        font-size: 300%;
+        padding-left: 40px;
+        padding-right: 40px;
+    }
+    .statsNavigationLeft {
+        border-radius: 35px 0 0 35px;
+        padding-left: 55px;
+    }
+    .statsNavigationRight {
+        border-radius: 0 35px 35px 0;
+        padding-right: 55px;
+    }
+    .activity {
+        font-size: 300%;
+    }
+    .countdownContainer p {
+        font-size: 2000% !important;
+    }
+    .btn-circle.btn-xl {
+        width: 230px;
+        height: 230px;
+        padding: 20px 0;
+        border-radius: 205px;
+        text-align: center;
+        border: none;
+        font-size: 300%;
+    }
+    .pomodoroCounter {
+        font-size: 400%;
+        padding-left: 30px;
+        padding-right: 38px;
+        border-radius: 0 50px 50px 0;
+    }
+    .navButton svg {
+        padding-top: .6%;
+        padding-bottom: .6%;
+    }
+}
