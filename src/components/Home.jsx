@@ -19,6 +19,7 @@ function Home() {
         }
     }, [isLoaded])
     
+    
     //spawn a tree after each pomodoro
     useEffect(()=> {
         if (isLoaded && pomodoro > 0) {
