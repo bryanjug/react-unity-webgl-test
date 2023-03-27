@@ -5,15 +5,21 @@ html, * {
 }
 
 body {
-    background: rgb(69,89,96);
+    background: rgb(69,89,96) !important;
 }
 
-.timerLeftSection {
-    text-align: right;
+.bi-chevron-compact-down, .bi-chevron-compact-up {
+    color: rgb(114, 114, 114) !important;
+    z-index: 9999 !important;
 }
 
-.timerRightSection {
-    text-align: left;
+.bi-chevron-compact-down:hover, .bi-chevron-compact-up:hover, .bi-chevron-compact-down:focus, .bi-chevron-compact-up:focus {
+    color: rgb(216, 216, 216) !important;
+}
+
+.changeTitle {
+    text-align: center !important;
+    margin-bottom: 0 !important;
 }
 
 .confirmedTimeChange {
@@ -89,19 +95,19 @@ input[type=number] {
 }
 
 .restingTitle {
-    margin-top: 30px;
+    margin-top: .5em;
 }
 
 .restingTitle, .workingTitle {
-    margin-bottom: 20px;
+    margin-bottom: .3em;
 }
 
 .changeTimer input {
     text-align: center !important;
     width: 55px;
-    line-height: 220% !important;
-    font-size: 220%;
-    background-color: #2F3D43;
+    line-height: 210% !important;
+    font-size: 150%;
+    background-color: #273236 !important;
     color: white !important;
     border: none;
     border-radius: 10px !important;
@@ -114,9 +120,6 @@ input[type=number] {
     background-color: #273236 !important;
 }
 
-.changeTimerButton {
-    margin-top: 40px;
-}
 
 .changeTimerButton:hover {
     background-color: #4B9C96 !important;
@@ -124,10 +127,6 @@ input[type=number] {
 
 .changeTimer {
     text-align: center !important;
-    bottom: 50%;
-    left: 50%;
-    transform: translate(-50%, 50%);
-    position: fixed;
 }
 
 .changeTimerButton {
@@ -481,11 +480,11 @@ a:active { text-decoration: none; }
 }
 
 .cyanButton {
-    background-color: #54AEA9;
+    background-color: #54AEA9 !important;
 }
 
 .cyanButton:hover { 
-    background-color: #458d89;
+    background-color: #458d89 !important;
     border: none;
 }
 
@@ -499,37 +498,39 @@ a:active { text-decoration: none; }
 }
 
 .statsNavigation {
-    border-radius: 0;
-    background-color: #2F3D43;
-    border: none;
-    border-left: 0.2px solid #28343a;
-    border-right: 0.2px solid #28343a;
+    border-radius: 0 !important;
+    background-color: #2F3D43 !important;
+    border: none !important;
+    border-left: 0.2px solid #28343a !important;
+    border-right: 0.2px solid #28343a !important;
 }
 
 .statsNavigation:hover {
-    background-color: #4B9C96;
+    background-color: #4B9C96 !important;
 }
 
 .statsNavigation:focus {
     outline: none !important;
     box-shadow: none !important;
-    background-color: #4B9C96;
+    background-color: #4B9C96 !important;
 }
 
 .statsNavigationLeft {
-    border-radius: 15px 0 0 15px;
-    padding-left: 20px;
+    border-radius: 15px 0 0 15px !important;
+    padding-left: 20px !important;
 }
 
 .statsNavigationRight {
-    border-radius: 0 15px 15px 0;
-    padding-right: 20px;
+    border-radius: 0 15px 15px 0 !important;
+    padding-right: 20px !important;
 }
 
 .countdown {
     line-height: 90%;
     margin-top: 280px !important;
     text-shadow: 0px 0px 10px black;
+    padding-bottom: .1em;
+    padding-top: .1em;
 }
 
 .graph {
