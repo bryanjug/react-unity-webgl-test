@@ -64,21 +64,21 @@ function ChangeTimer({setTime, setRestTime, hideNav}) {
                     <div className="col-6 timerLeftSection">
                         <p className="text-light changeTitle">Minutes</p>
                         <div className="upIconContainer">
-                            <i class="bi bi-chevron-compact-up" onClick={() => {workMinutesIncrease()}}></i>
+                            <i className="bi bi-chevron-compact-up" onClick={() => {workMinutesIncrease()}}></i>
                         </div>
                         <input type="number" placeholder="25" onChange={e => setWorkMinutes(e.target.value)} value={workMinutes} />
                         <div className="upIconContainer">
-                            <i class="bi bi-chevron-compact-down" onClick={() => {workMinutesDecrease()}}></i>
+                            <i className="bi bi-chevron-compact-down" onClick={() => {workMinutesDecrease()}}></i>
                         </div>
                     </div>
                     <div className="col-6 timerRightSection">
                         <p className="text-light changeTitle">Seconds</p>
                         <div className="upIconContainer">
-                            <i class="bi bi-chevron-compact-up" onClick={() => {workSecondsIncrease()}}></i>
+                            <i className="bi bi-chevron-compact-up" onClick={() => {workSecondsIncrease()}}></i>
                         </div>
                         <input type="number" placeholder="00" onChange={e => setWorkSeconds(e.target.value)} value={workSeconds} />
                         <div className="upIconContainer">
-                            <i class="bi bi-chevron-compact-down" onClick={() => {workSecondsDecrease()}}></i>
+                            <i className="bi bi-chevron-compact-down" onClick={() => {workSecondsDecrease()}}></i>
                         </div>
                     </div>
                     <div className="col-12 text-light restingTitle">
@@ -87,21 +87,21 @@ function ChangeTimer({setTime, setRestTime, hideNav}) {
                     <div className="col-6 timerLeftSection">
                         <p className="text-light changeTitle">Minutes</p>
                         <div className="upIconContainer">
-                            <i class="bi bi-chevron-compact-up" onClick={() => {restMinutesIncrease()}}></i>
+                            <i className="bi bi-chevron-compact-up" onClick={() => {restMinutesIncrease()}}></i>
                         </div>
                         <input type="number" placeholder="5" onChange={e => setRestMinutes(e.target.value)} value={restMinutes} />
                         <div className="upIconContainer">
-                            <i class="bi bi-chevron-compact-down" onClick={() => {restMinutesDecrease()}}></i>
+                            <i className="bi bi-chevron-compact-down" onClick={() => {restMinutesDecrease()}}></i>
                         </div>
                     </div>
                     <div className="col-6 timerRightSection">
                         <p className="text-light changeTitle">Seconds</p>
                         <div className="upIconContainer">
-                            <i class="bi bi-chevron-compact-up" onClick={() => {restSecondsIncrease()}}></i>
+                            <i className="bi bi-chevron-compact-up" onClick={() => {restSecondsIncrease()}}></i>
                         </div>
                         <input type="number" placeholder="00" onChange={e => setRestSeconds(e.target.value)} value={restSeconds} />
                         <div className="upIconContainer">
-                            <i class="bi bi-chevron-compact-down" onClick={() => {restSecondsDecrease()}}></i>
+                            <i className="bi bi-chevron-compact-down" onClick={() => {restSecondsDecrease()}}></i>
                         </div>
                     </div>
                     <div className="col-12">

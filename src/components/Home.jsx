@@ -12,8 +12,8 @@ function Home() {
         codeUrl: "build/WebGL.wasm",
     });
 
-    const [workTime, setWorkTime] = useState(1500000);
-    const [restTime, setRestTime] = useState(300000);
+    const [workTime, setWorkTime] = useState(1500000); //1500000
+    const [restTime, setRestTime] = useState(300000); //300000
     const [pomodoro, setPomodoro] = useState(0);
     const [pomodoroLifeTime, setPomodoroLifeTime] = useState(0);
     const [long, setLong] = useState("");
@@ -24,14 +24,9 @@ function Home() {
     const [start, setStart] = useState(false);
     const countdown = useRef(null);
     const nav = useRef(null);
-    
+
     //ask user permission for notifications
 	useEffect(() => {
-		if (!("Notification" in window)) {
-			console.log("This browser does not support desktop notifications");
-		} else {
-			Notification.requestPermission();
-		}
 		//resets state every hour in case user is still in app once day changes
 		let resetDay = setInterval(() => {
 			setToday(new Date().getDate());
@@ -77,16 +72,6 @@ function Home() {
 	}
 
     useOutsideAlerter(nav);
-
-    //show notification once timer is done
-	useEffect(() => {
-		if (activity === "Resting Mode") {
-			new Notification("It's time to take a break!");
-		}
-		if (activity === "Working Mode") {
-			new Notification("It's time to start working!");
-		}
-	}, [activity]);
 
     //long resting mode checker
 	useEffect(() => {
