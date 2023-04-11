@@ -1,6 +1,5 @@
 import {useRef} from 'react';
 import {useNavigate} from 'react-router-dom';
-import ChangeTimer from './ChangeTimer';
 
 export default function Navigation ({isLoaded, unload, setTime, setRestTime}) {
     const nav = useRef(null);
@@ -47,7 +46,6 @@ export default function Navigation ({isLoaded, unload, setTime, setRestTime}) {
                         <li>Statistics</li>
                     </button>
                 </ul>
-                <ChangeTimer setTime={setTime} setRestTime={setRestTime} hideNav={hideNav} />
             </div>
             
         </div>

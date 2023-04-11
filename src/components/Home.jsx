@@ -24,6 +24,7 @@ function Home() {
     const [start, setStart] = useState(false);
     const countdown = useRef(null);
     const nav = useRef(null);
+    const [dataLoaded, setDataLoaded] = useState(false);
 
     //ask user permission for notifications
 	useEffect(() => {
@@ -39,10 +40,10 @@ function Home() {
 
     //load total amount of trees from server
     useEffect(() => {
-        if (isLoaded) {
+        if (isLoaded && dataLoaded) {
             sendMessage("lowpoly_earth", "SpawnTrees", pomodoroLifeTime);
         }
-    }, [isLoaded])
+    }, [isLoaded, dataLoaded])
 
     //spawn a tree after each pomodoro
     useEffect(()=> {
@@ -97,6 +98,7 @@ function Home() {
             API.get(`/total`)
             .then(function(response) {
                 setPomodoroLifeTime(response.data[0].count)
+                setDataLoaded(true)
             })
             .catch(function (error) {
                 if (error.response) {
