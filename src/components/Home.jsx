@@ -530,6 +530,11 @@ function Home() {
                 unload={unload} 
                 setTime={setTime}
                 setRestTime={setRestTime}
+                setWorkTime={setWorkTime}
+                workTime={workTime}
+                restTime={restTime}
+                time={time}
+                activity={activity}
             />
             <div className="pomodoroCounterContainer pt-3">
 				<p className="text-light pomodoroCounter">{pomodoroLifeTime}</p>

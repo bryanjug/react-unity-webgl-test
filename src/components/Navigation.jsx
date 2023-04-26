@@ -1,10 +1,10 @@
-import {useRef} from 'react';
+import {useRef, useState} from 'react';
 import {useNavigate} from 'react-router-dom';
 
-export default function Navigation ({isLoaded, unload, setTime, setRestTime}) {
+export default function Navigation ({isLoaded, unload, setTime, setRestTime, setWorkTime, restTime, workTime, time, activity}) {
     const nav = useRef(null);
     const navigate = useNavigate();
-
+    
     function showNav() {
 		nav.current.style.right = "0px";
 	}
@@ -29,6 +29,11 @@ export default function Navigation ({isLoaded, unload, setTime, setRestTime}) {
         }
     }
 
+    const handleChange = event => {
+        setTime(event.target.value * 60000)
+        console.log(time)
+    }
+
     return (
         <div className="App">
             <div className="mhead">
@@ -42,10 +47,26 @@ export default function Navigation ({isLoaded, unload, setTime, setRestTime}) {
                     <button onClick={LinkToHome}>
                         <li>Pomodoro</li>
                     </button>
+                    <hr className='line'/>
                     <button onClick={LinkToStats}>
                         <li>Statistics</li>
                     </button>
+                    <hr className='line'/>
                 </ul>
+                <div className='setTimer'>
+                    {
+                        activity === "Working Mode" ?
+                        <p className='setTimerTitle'>SET WORK TIME</p>
+                        :
+                        <p className='setTimerTitle'>SET REST TIME</p>
+                    }
+                    <input type="range" className="form-range" min=".1" max="25" step=".1" id="customRange3" value={time / 60000} onChange={handleChange}/>
+                    <div className='setTimerNumber'>
+                        {time / 60000}
+                    </div>
+                    <p className='minutes'>Minutes</p>
+                </div>
+                
             </div>
             
         </div>

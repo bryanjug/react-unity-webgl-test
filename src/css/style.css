@@ -7,6 +7,44 @@ html, * {
 body {
     background: rgb(69,89,96) !important;
 }
+.line {
+    color:rgb(142, 142, 142);
+    width: 70%;
+    margin: auto;
+}
+.minutes {
+    color: white;
+    text-align: center;
+    margin-top: .5em;
+}
+.setTimer {
+    margin-top: 1em !important;
+}
+
+.setTimerNumber {
+    text-align: center;
+    font-size: 2em;
+    border: #455960 2px solid;
+    width: 2.5em;
+    margin: auto;
+    color: white;
+    border-radius: 5px;
+    padding-top: .2em;
+    padding-bottom: .2em;
+}
+
+.setTimerTitle {
+    text-align: center !important;
+    margin: auto !important;
+    padding-bottom: .5em;
+    color: white;
+}
+
+.form-range {
+    padding-left: 2em;
+    padding-right: 2em;
+    margin-bottom: 1em;
+}
 
 .bi-chevron-compact-down, .bi-chevron-compact-up {
     color: rgb(114, 114, 114) !important;
