@@ -31,7 +31,6 @@ export default function Navigation ({isLoaded, unload, setTime, setRestTime, set
 
     const handleChange = event => {
         setTime(event.target.value * 60000)
-        console.log(time)
     }
 
     return (
